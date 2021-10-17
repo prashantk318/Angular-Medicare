@@ -1,0 +1,41 @@
+
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px ;">
+            <div class="col-md-6 offset-md-3">
+                <h3 class="text-center color: red">Update Product here</h3>
+              <!--   {{user | json }} -->
+              <mat-card>
+                <form (ngSubmit)="onSubmit()" class="bg">
+                    <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>Name of Company</mat-label>
+                        <input required [(ngModel)] = "product.name"
+                        name="name"
+                        matInput placeholder="Enter company name">
+                      </mat-form-field>
+                     
+
+                      <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>Brand of Drug</mat-label>
+                        <input required [(ngModel)] = "product.brand" name = "brand" type="brand" matInput placeholder="Enter brand of product">
+                      </mat-form-field>
+
+                      <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>quantity of Medicines</mat-label>
+                        <input required [(ngModel)] = "product.quantity" name = "quantity" matInput placeholder="Enter quantity">
+                      </mat-form-field>
+
+                      <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>price of Medicines</mat-label>
+                        <input required [(ngModel)] = "product.price" name = "price" matInput placeholder="Enter price of product">
+                      </mat-form-field>
+
+                      <div class="container text-center">
+                      <button type="submit" mat-raised-button color="primary">Submit</button>
+                      </div>
+                </form>
+            </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

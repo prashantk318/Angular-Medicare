@@ -1,0 +1,45 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="row" style="margin-top: 20px ;">
+            <div class="col-md-6 offset-md-3">
+                <h3 class="text-center">Payment here</h3>
+              <!--   {{user | json }} -->
+              <mat-card>
+                <form (ngSubmit)="onSubmit()">
+                    <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>Name on Card</mat-label>
+                        <input required [(ngModel)] = "payment.name"
+                        name="name"
+                        matInput placeholder="Enter name">
+                      </mat-form-field>
+
+                      <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>Card No.</mat-label>
+                        <input required [(ngModel)] = "payment.cardNumber" name = "CardNumber" type="number" matInput placeholder="Enter debit/credit card number">
+                      </mat-form-field>
+
+                      <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>Expiry Date</mat-label>
+                        <input required [(ngModel)] = "payment.date" name = "date" matInput placeholder="MMYY">
+                      </mat-form-field>
+
+                      <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>Security code</mat-label>
+                        <input required [(ngModel)] = "payment.securityCode" name = "securityCode" matInput placeholder="Enter Securitycode">
+                      </mat-form-field>
+
+                      <mat-form-field  class = "full-width" appearance="fill">
+                        <mat-label>Postal Code</mat-label>
+                        <input required [(ngModel)] = "payment.postalCode" name = "postalCode"  matInput placeholder="Enter postalCode">
+                      </mat-form-field>
+                      <div class="container text-center">
+                      <button type="submit" mat-raised-button color="primary">Payment</button>
+                      
+                      </div>
+                </form>
+            </mat-card>
+            </div>
+        </div>
+    </div>
+</div>
+

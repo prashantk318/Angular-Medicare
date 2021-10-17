@@ -1,0 +1,35 @@
+<div class="navbar-nav navbar-collapse justify-content-end"></div>
+<h2>Medical-Product-List</h2>
+Search product <input type = "text" placeholder="search product company" [(ngModel)] = "filteredStatus">
+<div class="panel panel-primary">
+<div class="panel-body">
+  
+<table class ="bg" class="table table-striped table-bordered table-sm row-border hover" cellspacing="0" width="100%">
+  <thead>
+    
+      <tr>
+          <th>id</th> 
+          <th>Name of Company</th>
+          <th>Brand of Product</th>
+          <th>#Quantity Required</th>
+          <th>Price Of product</th>
+      </tr>
+   
+     
+  </thead>
+<tbody class="mr30">
+    <tr *ngFor="let product of products | filter:filteredStatus:'name'">
+      <td>{{product.id}}</td> 
+        <td>{{product.name}}</td>
+        <td>{{product.brand}}</td>
+        <td>{{product.quantity}}</td>
+        <td>{{product.price}}</td>
+        
+        <button mat-raised-button color="primary" (click)="ProductDetails(product.id)">Select</button>
+        
+    </tr>
+</tbody>
+</table>
+</div>
+</div>
+
